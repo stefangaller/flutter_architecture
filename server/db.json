@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "App Architecture with Riverpod"
+    },
+    {
+      "id": 2,
+      "title": "App Architecture with BLoC"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "text": "Great blog entry!",
+      "blogId": 1
+    },
+    {
+      "id": 2,
+      "text": "I really like riverpod!",
+      "blogId": 1
+    },
+    {
+      "id": 2,
+      "text": "BLoC is the best.",
+      "blogId": 2
+    }
+  ]
+}
