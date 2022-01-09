@@ -3,7 +3,7 @@ import 'package:blog_repository/blog_repository.dart';
 import 'package:dio/dio.dart';
 
 void main() {
-  final Dio dio = Dio(BaseOptions(baseUrl: 'http://192.168.0.206'));
+  final Dio dio = Dio(BaseOptions(baseUrl: 'http://192.168.0.206:3000'));
   final PostClient postClient = PostClient(dio);
 
   bootstrap(postClient: postClient);

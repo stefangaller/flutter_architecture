@@ -15,6 +15,10 @@
     {
       "id": 4,
       "title": "My new Post"
+    },
+    {
+      "id": 5,
+      "title": "A new Bloc Post"
     }
   ],
   "comments": [
