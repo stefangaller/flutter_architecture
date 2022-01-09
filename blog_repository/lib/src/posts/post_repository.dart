@@ -9,4 +9,13 @@ class PostRepository {
 
   Future<List<Post>> getPosts({CancelToken? token}) =>
       _postClient.getPosts(token: token);
+
+  Future<void> addPost(Post post) => _postClient.addPost(post);
+
+  Future deletePost(int id) => _postClient.deletePost(id);
+
+  Future<Post> getPost(int id) => _postClient.getPost(id);
+
+  Future<void> updatePost(int id, Post post) =>
+      _postClient.updatePost(id, post);
 }

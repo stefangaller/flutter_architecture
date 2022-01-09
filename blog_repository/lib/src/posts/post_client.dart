@@ -11,4 +11,16 @@ abstract class PostClient {
 
   @GET('/posts')
   Future<List<Post>> getPosts({@CancelRequest() CancelToken? token});
+
+  @POST('/posts')
+  Future<void> addPost(@Body() Post post);
+
+  @GET('/posts/{id}')
+  Future<Post> getPost(@Path() int id);
+
+  @DELETE('/posts/{id}')
+  Future<void> deletePost(@Path() int id);
+  
+  @PUT('/posts/{id}')
+  Future<void> updatePost(@Path() int id, @Body() Post post);
 }

@@ -32,6 +32,10 @@ class PostsPage extends ConsumerWidget {
           )
         ),
       ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.add),
+        onPressed: () => ref.read(postsController).add(),
+      ),
     );
   }
 }

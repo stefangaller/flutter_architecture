@@ -21,7 +21,7 @@ Post _$PostFromJson(Map<String, dynamic> json) {
 class _$PostTearOff {
   const _$PostTearOff();
 
-  _Post call({required int id, required String title}) {
+  _Post call({int? id, required String title}) {
     return _Post(
       id: id,
       title: title,
@@ -38,7 +38,7 @@ const $Post = _$PostTearOff();
 
 /// @nodoc
 mixin _$Post {
-  int get id => throw _privateConstructorUsedError;
+  int? get id => throw _privateConstructorUsedError;
   String get title => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -50,7 +50,7 @@ mixin _$Post {
 abstract class $PostCopyWith<$Res> {
   factory $PostCopyWith(Post value, $Res Function(Post) then) =
       _$PostCopyWithImpl<$Res>;
-  $Res call({int id, String title});
+  $Res call({int? id, String title});
 }
 
 /// @nodoc
@@ -70,7 +70,7 @@ class _$PostCopyWithImpl<$Res> implements $PostCopyWith<$Res> {
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -84,7 +84,7 @@ abstract class _$PostCopyWith<$Res> implements $PostCopyWith<$Res> {
   factory _$PostCopyWith(_Post value, $Res Function(_Post) then) =
       __$PostCopyWithImpl<$Res>;
   @override
-  $Res call({int id, String title});
+  $Res call({int? id, String title});
 }
 
 /// @nodoc
@@ -105,7 +105,7 @@ class __$PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       title: title == freezed
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
@@ -117,12 +117,12 @@ class __$PostCopyWithImpl<$Res> extends _$PostCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Post implements _Post {
-  const _$_Post({required this.id, required this.title});
+  const _$_Post({this.id, required this.title});
 
   factory _$_Post.fromJson(Map<String, dynamic> json) => _$$_PostFromJson(json);
 
   @override
-  final int id;
+  final int? id;
   @override
   final String title;
 
@@ -158,12 +158,12 @@ class _$_Post implements _Post {
 }
 
 abstract class _Post implements Post {
-  const factory _Post({required int id, required String title}) = _$_Post;
+  const factory _Post({int? id, required String title}) = _$_Post;
 
   factory _Post.fromJson(Map<String, dynamic> json) = _$_Post.fromJson;
 
   @override
-  int get id;
+  int? get id;
   @override
   String get title;
   @override

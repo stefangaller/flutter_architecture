@@ -7,6 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 main() {
   final config = Config(
     envName: 'prod',
+    // for demonstration purposes, this url does not exist
     baseUrl: 'https://bettercoding.dev/api/',
     debug: false,
   );
