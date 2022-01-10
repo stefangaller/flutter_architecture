@@ -27,6 +27,14 @@
     {
       "id": 7,
       "title": "My new Post"
+    },
+    {
+      "id": 8,
+      "title": "My new post"
+    },
+    {
+      "id": 9,
+      "title": "My new post"
     }
   ],
   "comments": [
