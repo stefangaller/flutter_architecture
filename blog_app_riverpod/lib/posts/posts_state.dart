@@ -8,3 +8,5 @@ final postListProvider = FutureProvider.autoDispose((ref){
   ref.onDispose(() => cancelToken.cancel());
   return ref.watch(postRepositoryProvider).getPosts(token: cancelToken);
 });
+
+final postsErrorProvider = StateProvider<String?>((ref) => null);

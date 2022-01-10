@@ -19,6 +19,14 @@
     {
       "id": 5,
       "title": "A new Bloc Post"
+    },
+    {
+      "id": 6,
+      "title": "My new Post"
+    },
+    {
+      "id": 7,
+      "title": "My new Post"
     }
   ],
   "comments": [
