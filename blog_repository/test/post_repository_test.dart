@@ -8,11 +8,11 @@ class MockPostClient extends Mock implements PostClient {}
 
 main() {
   late PostClient postClient;
-  late PostRepository postRepository;
+  late ApiPostRepository postRepository;
 
   setUp(() {
     postClient = MockPostClient();
-    postRepository = PostRepository(postClient);
+    postRepository = ApiPostRepository(postClient);
   });
 
   test('get posts', () async {

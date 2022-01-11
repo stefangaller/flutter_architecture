@@ -3,7 +3,7 @@ import 'package:blog_repository/blog_repository.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class PostsCubit extends Cubit<PostsState> {
-  final PostRepository _postsRepository;
+  final ApiPostRepository _postsRepository;
 
   PostsCubit(this._postsRepository) : super(const PostsState.loading());
 

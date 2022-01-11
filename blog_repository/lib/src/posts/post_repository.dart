@@ -1,21 +1,14 @@
 import 'package:blog_repository/src/posts/post.dart';
-import 'package:blog_repository/src/posts/post_client.dart';
 import 'package:dio/dio.dart';
 
-class PostRepository {
-  final PostClient _postClient;
+abstract class PostRepository {
+  Future<List<Post>> getPosts({CancelToken? token});
 
-  PostRepository(this._postClient);
+  Future<void> addPost(Post post);
 
-  Future<List<Post>> getPosts({CancelToken? token}) =>
-      _postClient.getPosts(token: token);
+  Future deletePost(int id);
 
-  Future<void> addPost(Post post) => _postClient.addPost(post);
+  Future<Post> getPost(int id);
 
-  Future deletePost(int id) => _postClient.deletePost(id);
-
-  Future<Post> getPost(int id) => _postClient.getPost(id);
-
-  Future<void> updatePost(int id, Post post) =>
-      _postClient.updatePost(id, post);
+  Future<void> updatePost(int id, Post post);
 }

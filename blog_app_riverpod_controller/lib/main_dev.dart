@@ -1,6 +1,7 @@
 import 'package:blog_app_riverpod_controller/app.dart';
 import 'package:blog_app_riverpod_controller/config.dart';
 import 'package:blog_app_riverpod_controller/global_providers.dart';
+import 'package:blog_repository/blog_repository.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -15,6 +16,8 @@ void main() {
     ProviderScope(
       overrides: [
         configProvider.overrideWithValue(config),
+        // override with a fake implementation
+        postRepositoryProvider.overrideWithValue(FakePostRepository()),
       ],
       child: const App(),
     ),

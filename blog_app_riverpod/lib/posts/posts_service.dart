@@ -10,7 +10,7 @@ final postsServiceProvider = Provider(
 );
 
 class PostsService {
-  final PostRepository _postRepository;
+  final ApiPostRepository _postRepository;
 
   PostsService(this._postRepository);
 

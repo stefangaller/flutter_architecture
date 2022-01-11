@@ -24,8 +24,8 @@ final postClientProvider = Provider(
   ),
 );
 
-final postRepositoryProvider = Provider(
-  (ref) => PostRepository(
-    ref.watch(postClientProvider),
-  ),
+final postRepositoryProvider = Provider<PostRepository>(
+  (ref) {
+    return ApiPostRepository(ref.watch(postClientProvider));
+  },
 );

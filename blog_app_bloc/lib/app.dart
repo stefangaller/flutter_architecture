@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 class App extends StatelessWidget {
 
-  final PostRepository postRepository;
+  final ApiPostRepository postRepository;
 
   const App({Key? key, required this.postRepository}) : super(key: key);
 

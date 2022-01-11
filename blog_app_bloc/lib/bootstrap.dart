@@ -3,7 +3,7 @@ import 'package:blog_repository/blog_repository.dart';
 import 'package:flutter/cupertino.dart';
 
 void bootstrap({required PostClient postClient}) {
-  final postRepository = PostRepository(postClient);
+  final postRepository = ApiPostRepository(postClient);
 
   runApp(
     App(
